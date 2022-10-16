@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-//const dateFormat = require('../utils/dateFormat');
+const dateFormat = require('../utils/dateFormat');
 
 const PizzaSchema = new Schema(
   {
@@ -29,7 +29,7 @@ const PizzaSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
-      //getters: true
+      getters: true
     },
     // prevents virtuals from creating duplicate of _id as `id`
     id: false
